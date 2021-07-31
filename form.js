@@ -1,16 +1,24 @@
 $('input[type=submit]').on('click', e=>{
     
-    const txt = $('[name=userid]').val();
-    const msg = $('[name=userid]').attr('placeholder');
+    if(!isTxt('userid', 5)) e.preventDefault();
+})
 
-    if(txt == ''){
-        e.preventDefault();
-        alert(msg);
-    } else {
-        if(txt.length < 5){
-            e.preventDefault();
-            alert('최소 5글자 이상 입력하세요.');
-            $('[name=userid]').addClass('error');
+function isTxt(name, len){
+    if(len == undefined) len = 5;
+    const txt = $(`[name=${name}]`).val();
+    const msg = $(`[name=${name}]`).attr('placeholder');
+
+    if(txt==''){
+        $(`[name=${name}]`).addClass('error');
+        return false;
+    }else{
+        if(txt.length < len){
+            alert(`최소 ${len}글자 이상 입력하세요!`);
+            $(`[name=${name}]`).addClass('error');
+            return false;
+        }else {
+            $(`[name=${name}]`).removeClass('error');
+            return true;
         }
     }
-})
+}
