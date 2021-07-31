@@ -10,6 +10,80 @@
     <script defer src="form.js"></script>
 </head>
 <body>
-    
+
+<section>
+    <form action="result.html" method="get">            
+        <fieldset>
+            <legend>MEMBERSHIP</legend>
+
+            <article class="userid">
+                <label for="userid">User ID</label>
+                <input type="text" id="userid" name="userid"
+                placeholder="아이디를 입력하세요.">
+            </article>
+
+            <article class="pwd">
+                <label for="pwd1">Password</label>
+                <input type="password" id="pwd1" name="pwd1" 
+                    placeholder="비밀번호를 입력하세요">
+                <br>
+                <label for="pwd2">Re Password</label>
+                <input type="password" id="pwd2" name="pwd2" 
+                    placeholder="비밀번호를 재 입력하세요">
+            </article> 
+
+            <article class="email">
+                <label for="email">E-mail</label>
+                <input type="text" name="email1" id="email" placeholder="이메일 아이디를 입력하세요.">
+                <select name="email2" id="email2">
+                    <option value="">이메일 서비스를 선택해주세요</option>
+                    <option value="naver.com">@naver.com</option>
+                    <option value="nate.com">@nate.com</option>
+                    <option value="gmail.com">@gmail.com</option>
+                </select>
+            </article>
+
+            <article class="gender" style="margin-bottom: 10px;">
+                <h2>Gender</h2>
+                <p>성별을 선택해주세요.</p>
+
+                <label for="male">male</label>
+                <input type="radio" id="male" name="gender" value="male">
+
+                <label for="female">female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </article>
+
+            <article class="comments">
+                <label for="comments">Leave Messege</label>
+                <textarea name="comments" id="comments" 
+                cols="30" rows="5"
+                placeholder="메세지를 남겨주세요."></textarea>
+            </article>
+
+            <article class="hobby">
+                <h2>Hobby</h2>
+                <p>취미를 한가지 이상 입력해주세요.</p>
+
+                <label for="sports">sports</label>
+                <input type="checkbox" id="sports" name="hobby" value="sports">
+
+                <label for="music">music</label>
+                <input type="checkbox" id="music" name="hobby" value="music">
+
+                <label for="game">game</label>
+                <input type="checkbox" id="game" name="hobby" value="game">
+
+                <label for="reading">reading</label>
+                <input type="checkbox" id="reading" name="hobby" value="reading">
+            </article>
+
+            
+
+            <input type="reset" value="CANCEL">
+            <input type="submit" value="CONFIRM">
+        </fieldset>
+    </form>
+</section>   
 </body>
 </html>
